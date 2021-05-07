@@ -9,7 +9,7 @@ Execute no terminal os comandos `npm install` para instalar as dependencias  e  
 ## Aplicação e Funcionamento
 
 ### Estilização  
-- Para a Estilização da aplicação foi utilizado recursos o Bootstrap 4.5 e Instruções proprias de css no arquivos src/styles.css (Pagina principal) e src/assets/styleMaps.css (Estilização do google maps);
+- Para a Estilização da aplicação foi utilizado recursos do Bootstrap 4.5 e Instruções proprias de css no arquivos src/styles.css (Pagina principal) e src/assets/styleMaps.css (Estilização do google maps);
 
 ### Components e Services
 
