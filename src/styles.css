@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: MarvelFont;
+  font-style: normal;
+  font-weight: normal;
+  src: url(assets/AvengeroRegular-zvgl.ttf);
+}
+body{
+  background-color: black;
+}
+#listaDeQuadrinhos{
+  /* margin-top: 100px; */
+  margin-bottom: 25px;
+}
+#titulo{
+  font-size: x-large;
+  color: brown;
+}
+.sub-titulo b{
+  margin-right: 20px;
+  color: white;
+}
+.text-body{
+  margin-bottom: 20px;
+}
+button.visualisar{
+  margin-left: 90%;
+margin-top: -30px;
+}
+.page-link:hover{
+  background-color: brown;
+  color: white;
+}
+.page-link{
+  color: black;
+
+}

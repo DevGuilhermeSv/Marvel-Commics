@@ -1,0 +1,60 @@
+<div #teste><app-loading ></app-loading></div>
+
+<div class="row form-group no-gutters">
+  <div class="col-4">
+    <input [formControl]= "queryField" id="inputTitle" type="text" class="form-control" id="formGroupExampleInput" placeholder="Filtre pelo titulo">
+
+  </div>
+  <div (click)="onSearch()" class="col-1">
+    <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#FFFFFF">
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path
+        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+    </svg>
+  </div>
+</div>
+<div id="listaDeQuadrinhos" class="list-group">
+  <div *ngFor="let item of results |  paginate: { itemsPerPage: 10, currentPage: p } ;index as i;" class="list-group-item list-group-item-action">
+    <b id="list{{i}}">{{item.title}}</b>
+    <button data-toggle="modal" (click)="getDetails(i)" data-target="#exampleModal"
+      class="visualisar btn btn-primary">Visualisar</button>
+  </div>
+
+</div>
+<pagination-controls class="pages" (pageChange)="p = $event"></pagination-controls>
+
+<!-- MODAL -->
+ <div id="exampleModal" class="modal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <b>
+          <h5 class="modal-title">Modal title</h5>
+        </b>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <font size=4 face="MarvelFont">
+            Detalhes:
+          </font>
+          {{descricao}}
+        </p>
+        <p class="text-body"></p>
+        <p>
+          <font size=4 face="MarvelFont">
+            Marque seu local no mapa
+          </font>
+        </p>
+        <div id="map"></div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-danger">Enviar para a localização</button>
+      </div>
+    </div>
+  </div>
+</div>

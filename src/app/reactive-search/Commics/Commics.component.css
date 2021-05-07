@@ -1,0 +1,14 @@
+.pages /deep/ .ngx-pagination li{
+  border-radius: 5px;
+}
+.pages /deep/ .ngx-pagination li a:hover{
+  background-color: brown;
+  color: azure;
+  border-radius: 5px;
+}
+.pages /deep/ .ngx-pagination .current{
+  background-color: brown;
+}
+.pages /deep/ .ngx-pagination .pagination-next{
+  color: azure;
+}
